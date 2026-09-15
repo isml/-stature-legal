@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stature Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7; --surface:#F2F2EA; --border:#E3E3D8;
+    --text:#15180F; --text-muted:#5B6153; --accent:#5E9412; --accent-ink:#22310A;
+    --accent-soft:rgba(94,148,18,0.10); --chip:#EDF3E2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0A0D08; --surface:#12160D; --border:#212A16;
+      --text:#F1F4EA; --text-muted:#9AA38D; --accent:#C7FF24; --accent-ink:#0A0D08;
+      --accent-soft:rgba(199,255,36,0.12); --chip:#182010;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0A0D08; --surface:#12160D; --border:#212A16;
+    --text:#F1F4EA; --text-muted:#9AA38D; --accent:#C7FF24; --accent-ink:#0A0D08;
+    --accent-soft:rgba(199,255,36,0.12); --chip:#182010;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Manrope',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    padding:0 20px; line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:700px; margin:0 auto; padding-block:48px 80px;}
+  header.top{display:flex; align-items:center; gap:12px; margin-bottom:8px;}
+  .mark{width:36px; height:36px; border-radius:10px; flex:none;}
+  .brand{font-weight:800; font-size:15px; letter-spacing:0.2px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:6px; margin-top:28px;
+    background:var(--chip); color:var(--accent); border:1px solid var(--border);
+    padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700;
+    letter-spacing:0.6px; text-transform:uppercase;
+  }
+  h1{
+    font-size:clamp(30px,5vw,40px); font-weight:800; letter-spacing:-0.5px;
+    margin:14px 0 6px; text-wrap:balance;
+  }
+  .meta{color:var(--text-muted); font-size:14px; margin-bottom:28px;}
+  .lede{
+    font-size:17px; color:var(--text); background:var(--surface);
+    border:1px solid var(--border); border-radius:14px; padding:18px 20px;
+    margin-bottom:32px;
+  }
+  .lede b{color:var(--accent-ink); background:var(--accent-soft); padding:0 3px; border-radius:4px;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lede b{color:var(--text);}}
+  :root[data-theme="dark"] .lede b{color:var(--text);}
+  nav.toc{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:40px;}
+  nav.toc a{
+    font-size:13px; font-weight:600; color:var(--text-muted);
+    text-decoration:none; background:var(--surface); border:1px solid var(--border);
+    padding:6px 12px; border-radius:8px;
+  }
+  nav.toc a:hover{color:var(--accent-ink); border-color:var(--accent);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) nav.toc a:hover{color:var(--accent);}}
+  :root[data-theme="dark"] nav.toc a:hover{color:var(--accent);}
+  section{margin-bottom:36px; scroll-margin-top:20px;}
+  h2{font-size:21px; font-weight:800; margin:0 0 12px; display:flex; align-items:baseline; gap:10px;}
+  h2 .num{
+    color:var(--accent-ink); background:var(--accent-soft);
+    font-size:13px; font-weight:800; padding:2px 8px; border-radius:6px;
+  }
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h2 .num{color:var(--accent);}}
+  :root[data-theme="dark"] h2 .num{color:var(--accent);}
+  p{margin:0 0 12px; color:var(--text);}
+  p.muted, li.muted{color:var(--text-muted);}
+  ul{margin:0 0 12px; padding-left:20px;}
+  li{margin-bottom:6px;}
+  a{color:var(--accent-ink);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) a{color:var(--accent);}}
+  :root[data-theme="dark"] a{color:var(--accent);}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:480px){.grid2{grid-template-columns:1fr;}}
+  .plan{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px;}
+  .plan .name{font-weight:700; font-size:13px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.4px;}
+  .plan .price{font-weight:800; font-size:20px; margin-top:4px;}
+  footer{
+    margin-top:56px; padding-top:24px; border-top:1px solid var(--border);
+    color:var(--text-muted); font-size:13.5px; display:flex; flex-wrap:wrap;
+    gap:8px 18px; justify-content:space-between; align-items:center;
+  }
+  footer .links a{margin-right:16px; font-weight:700; text-decoration:none;}
+  .disclaimer{
+    margin-top:14px; font-size:12.5px; color:var(--text-muted);
+    background:var(--surface); border:1px dashed var(--border); border-radius:10px; padding:12px 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stature">
+      <rect width="100" height="100" rx="26" fill="#C7FF24"/>
+      <path d="M28 74 L50 32 L72 74" fill="none" stroke="#141A0C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="50" cy="24" r="6.2" fill="#141A0C"/>
+    </svg>
+    <span class="brand">Stature</span>
+  </header>
+
+  <span class="eyebrow">Legal</span>
+  <h1>Terms of Service</h1>
+  <p class="meta">Effective September 16, 2026 · Applies to the Stature: Height Growth Tracker app (app.stature.imk)</p>
+
+  <div class="lede">
+    Stature gives you <b>informational</b> height and growth estimates and a
+    daily routine — it's not medical advice. Using the app means you agree to
+    the terms below, including how <b>Stature Pro</b> subscriptions renew and
+    how to cancel them.
+  </div>
+
+  <nav class="toc">
+    <a href="#accept">Acceptance</a>
+    <a href="#service">The service</a>
+    <a href="#eligibility">Eligibility</a>
+    <a href="#health">Not medical advice</a>
+    <a href="#billing">Subscriptions</a>
+    <a href="#conduct">Acceptable use</a>
+    <a href="#ip">Ownership</a>
+    <a href="#warranty">Warranty</a>
+    <a href="#liability">Liability</a>
+    <a href="#termination">Termination</a>
+    <a href="#changes">Changes</a>
+    <a href="#law">Governing law</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="accept">
+    <h2><span class="num">1</span>Acceptance of these terms</h2>
+    <p>By downloading, installing, or using Stature, you agree to these Terms of
+    Service and our <a href="privacy.html">Privacy Policy</a>. If you
+    don't agree, please don't use the app.</p>
+  </section>
+
+  <section id="service">
+    <h2><span class="num">2</span>The service</h2>
+    <p>Stature estimates your possible adult height and remaining growth from
+    the profile information you enter (current height, age, family reference,
+    daily habits), and offers a light daily routine and educational articles.
+    Estimates are statistical projections built from established growth-chart
+    methodology — not a guarantee of any specific outcome.</p>
+  </section>
+
+  <section id="eligibility">
+    <h2><span class="num">3</span>Eligibility</h2>
+    <p>Stature is intended for a general and teen audience. If you are under
+    18, please review the app together with a parent or guardian, particularly
+    before subscribing to Stature Pro.</p>
+  </section>
+
+  <section id="health">
+    <h2><span class="num">4</span>Not medical advice</h2>
+    <p>Nothing in Stature is a medical diagnosis, treatment, or professional
+    advice. Growth patterns vary widely and can be affected by factors the app
+    doesn't know about. Talk to a pediatrician or doctor for anything related
+    to your actual health, growth, or development.</p>
+  </section>
+
+  <section id="billing">
+    <h2><span class="num">5</span>Stature Pro subscriptions</h2>
+    <p>Stature is free to use for core tracking. <b>Stature Pro</b> unlocks the
+    full height prediction, monthly reports, and full daily routine, billed
+    through Google Play or the App Store:</p>
+    <div class="grid2">
+      <div class="plan"><div class="name">Weekly</div><div class="price">$7.99 / week</div></div>
+      <div class="plan"><div class="name">Annual</div><div class="price">$49.99 / year</div></div>
+    </div>
+    <ul style="margin-top:14px;">
+      <li>Subscriptions <b>renew automatically</b> at the price shown in the store
+      listing at the time of purchase, unless cancelled at least 24 hours before
+      the renewal date.</li>
+      <li>Manage or cancel any time from Google Play → Subscriptions, or
+      Settings → Apple ID → Subscriptions on iOS — not from inside Stature.</li>
+      <li>Refunds are handled by Google Play / Apple under their own refund
+      policies; we don't process refunds directly.</li>
+      <li>Prices may vary by region and are set at checkout by the store.</li>
+    </ul>
+  </section>
+
+  <section id="conduct">
+    <h2><span class="num">6</span>Acceptable use</h2>
+    <ul>
+      <li>Don't reverse-engineer, decompile, or resell access to the app.</li>
+      <li>Don't use the app in a way that could harm, disable, or overburden it.</li>
+      <li>Don't misrepresent your age to access content not meant for you.</li>
+    </ul>
+  </section>
+
+  <section id="ip">
+    <h2><span class="num">7</span>Ownership</h2>
+    <p>The app, its design, illustrations, copy, and underlying code belong to
+    us. Your growth-profile data belongs to you — see the
+    <a href="privacy.html">Privacy Policy</a> for how it's stored.</p>
+  </section>
+
+  <section id="warranty">
+    <h2><span class="num">8</span>No warranty</h2>
+    <p>Stature is provided "as is." We don't guarantee the app will be
+    uninterrupted, error-free, or that any estimate will match your actual
+    future height. Growth prediction is inherently uncertain.</p>
+  </section>
+
+  <section id="liability">
+    <h2><span class="num">9</span>Limitation of liability</h2>
+    <p>To the extent permitted by law, we aren't liable for indirect,
+    incidental, or consequential damages arising from your use of the app.
+    Our total liability for any claim is limited to the amount you paid us in
+    the twelve months before the claim, if any.</p>
+  </section>
+
+  <section id="termination">
+    <h2><span class="num">10</span>Termination</h2>
+    <p>You can stop using Stature at any time by uninstalling it. We may
+    suspend or terminate access for accounts that violate these terms.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">11</span>Changes to these terms</h2>
+    <p>We may update these terms as the app evolves. Material changes will be
+    flagged in the app or on this page, with an updated effective date above.</p>
+  </section>
+
+  <section id="law">
+    <h2><span class="num">12</span>Governing law</h2>
+    <p>These terms are governed by the mandatory consumer-protection laws of
+    your country of residence, in addition to any laws that apply where we're
+    based. Nothing here limits statutory rights you can't waive by contract.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">13</span>Contact us</h2>
+    <p>Questions about these terms? Email
+    <a href="mailto:ismail.karakasmaras@gmail.com">ismail.karakasmaras@gmail.com</a>.</p>
+    <div class="disclaimer">
+      These terms were drafted to accurately describe how Stature and Stature
+      Pro currently work and are not a substitute for legal advice. If your
+      business needs guaranteed compliance in a specific jurisdiction, have
+      them reviewed by a qualified lawyer before relying on them.
+    </div>
+  </section>
+
+  <footer>
+    <div class="links"><a href="privacy.html">Privacy Policy</a></div>
+    <div>© 2026 Stature</div>
+  </footer>
+</div>
+</body>
+</html>

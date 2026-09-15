@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stature Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7; --surface:#F2F2EA; --border:#E3E3D8;
+    --text:#15180F; --text-muted:#5B6153; --accent:#5E9412; --accent-ink:#22310A;
+    --accent-soft:rgba(94,148,18,0.10); --chip:#EDF3E2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0A0D08; --surface:#12160D; --border:#212A16;
+      --text:#F1F4EA; --text-muted:#9AA38D; --accent:#C7FF24; --accent-ink:#0A0D08;
+      --accent-soft:rgba(199,255,36,0.12); --chip:#182010;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0A0D08; --surface:#12160D; --border:#212A16;
+    --text:#F1F4EA; --text-muted:#9AA38D; --accent:#C7FF24; --accent-ink:#0A0D08;
+    --accent-soft:rgba(199,255,36,0.12); --chip:#182010;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Manrope',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    padding:0 20px; line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:700px; margin:0 auto; padding-block:48px 80px;}
+  header.top{display:flex; align-items:center; gap:12px; margin-bottom:8px;}
+  .mark{width:36px; height:36px; border-radius:10px; flex:none;}
+  .brand{font-weight:800; font-size:15px; letter-spacing:0.2px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:6px; margin-top:28px;
+    background:var(--chip); color:var(--accent); border:1px solid var(--border);
+    padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700;
+    letter-spacing:0.6px; text-transform:uppercase;
+  }
+  h1{
+    font-size:clamp(30px,5vw,40px); font-weight:800; letter-spacing:-0.5px;
+    margin:14px 0 6px; text-wrap:balance;
+  }
+  .meta{color:var(--text-muted); font-size:14px; margin-bottom:28px;}
+  .lede{
+    font-size:17px; color:var(--text); background:var(--surface);
+    border:1px solid var(--border); border-radius:14px; padding:18px 20px;
+    margin-bottom:32px;
+  }
+  .lede b{color:var(--accent-ink); background:var(--accent-soft); padding:0 3px; border-radius:4px;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lede b{color:var(--text);}}
+  :root[data-theme="dark"] .lede b{color:var(--text);}
+  nav.toc{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:40px;}
+  nav.toc a{
+    font-size:13px; font-weight:600; color:var(--text-muted);
+    text-decoration:none; background:var(--surface); border:1px solid var(--border);
+    padding:6px 12px; border-radius:8px;
+  }
+  nav.toc a:hover{color:var(--accent-ink); border-color:var(--accent);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) nav.toc a:hover{color:var(--accent);}}
+  :root[data-theme="dark"] nav.toc a:hover{color:var(--accent);}
+  section{margin-bottom:36px; scroll-margin-top:20px;}
+  h2{font-size:21px; font-weight:800; margin:0 0 12px; display:flex; align-items:baseline; gap:10px;}
+  h2 .num{
+    color:var(--accent-ink); background:var(--accent-soft);
+    font-size:13px; font-weight:800; padding:2px 8px; border-radius:6px;
+  }
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h2 .num{color:var(--accent);}}
+  :root[data-theme="dark"] h2 .num{color:var(--accent);}
+  p{margin:0 0 12px; color:var(--text);}
+  p.muted, li.muted{color:var(--text-muted);}
+  ul{margin:0 0 12px; padding-left:20px;}
+  li{margin-bottom:6px;}
+  a{color:var(--accent-ink);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) a{color:var(--accent);}}
+  :root[data-theme="dark"] a{color:var(--accent);}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px;}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  th{color:var(--text-muted); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:0.4px;}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0;}
+  footer{
+    margin-top:56px; padding-top:24px; border-top:1px solid var(--border);
+    color:var(--text-muted); font-size:13.5px; display:flex; flex-wrap:wrap;
+    gap:8px 18px; justify-content:space-between; align-items:center;
+  }
+  footer .links a{margin-right:16px; font-weight:700; text-decoration:none;}
+  .disclaimer{
+    margin-top:14px; font-size:12.5px; color:var(--text-muted);
+    background:var(--surface); border:1px dashed var(--border); border-radius:10px; padding:12px 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stature">
+      <rect width="100" height="100" rx="26" fill="#C7FF24"/>
+      <path d="M28 74 L50 32 L72 74" fill="none" stroke="#141A0C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="50" cy="24" r="6.2" fill="#141A0C"/>
+    </svg>
+    <span class="brand">Stature</span>
+  </header>
+
+  <span class="eyebrow">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective September 16, 2026 · Applies to the Stature: Height Growth Tracker app (app.stature.imk)</p>
+
+  <div class="lede">
+    The short version: <b>Stature doesn't require an account</b>, your growth profile
+    (height, age, family reference, daily habits) is <b>stored only on your device</b>,
+    we don't sell your data, and we don't show ads. This page explains exactly what
+    the app does send off your device, and why.
+  </div>
+
+  <nav class="toc">
+    <a href="#overview">Overview</a>
+    <a href="#account">No account</a>
+    <a href="#collect">What we collect</a>
+    <a href="#use">How we use it</a>
+    <a href="#share">Third parties</a>
+    <a href="#retention">Storage &amp; retention</a>
+    <a href="#choices">Your choices</a>
+    <a href="#children">Children</a>
+    <a href="#health">Health disclaimer</a>
+    <a href="#security">Security</a>
+    <a href="#changes">Changes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="overview">
+    <h2><span class="num">1</span>Overview</h2>
+    <p>Stature ("we", "us", "the app") is a height-tracking and growth-estimate app
+    published by İsmail Karakaş. This policy describes what information the app
+    collects, how it's used, and who it's shared with. It applies to the Android
+    and iOS versions of Stature.</p>
+  </section>
+
+  <section id="account">
+    <h2><span class="num">2</span>No account required</h2>
+    <p>Stature does not ask you to sign up, and does not collect your name, email
+    address, or phone number to use the app. On first launch, the app generates
+    a random device identifier and an anonymous authentication token (see
+    <a href="#share">Third parties</a>) purely to keep your local data stable
+    between sessions and to correlate crash reports — neither is tied to your
+    real-world identity.</p>
+  </section>
+
+  <section id="collect">
+    <h2><span class="num">3</span>What we collect</h2>
+    <table>
+      <tr><th>Category</th><th>Examples</th><th>Where it lives</th></tr>
+      <tr>
+        <td>Growth profile</td>
+        <td>Age, sex, current height, family height reference, sleep / activity / nutrition answers, measurement history</td>
+        <td><b>On your device only.</b> Never uploaded to a Stature server — we don't operate one.</td>
+      </tr>
+      <tr>
+        <td>Usage analytics</td>
+        <td>Screens viewed, features used, app-open events — no profile values attached</td>
+        <td>Firebase Analytics (Google), tied to an anonymous device ID</td>
+      </tr>
+      <tr>
+        <td>Crash &amp; performance data</td>
+        <td>Stack traces, device model, OS version</td>
+        <td>Firebase Crashlytics (Google)</td>
+      </tr>
+      <tr>
+        <td>Purchase data</td>
+        <td>Subscription status, plan, purchase token</td>
+        <td>RevenueCat and the Google Play / App Store billing system</td>
+      </tr>
+    </table>
+    <p class="muted">We do not collect photos, contacts, location, or precise
+    identity information at any point.</p>
+  </section>
+
+  <section id="use">
+    <h2><span class="num">4</span>How we use this information</h2>
+    <ul>
+      <li>To calculate your on-device height estimate, growth velocity, and routine recommendations.</li>
+      <li>To understand which features are actually used, so we can improve the app.</li>
+      <li>To diagnose and fix crashes.</li>
+      <li>To unlock Stature Pro features after a verified purchase, and to let you restore a purchase on a new device.</li>
+    </ul>
+  </section>
+
+  <section id="share">
+    <h2><span class="num">5</span>Third-party services we use</h2>
+    <p>We use a small number of well-known infrastructure providers. We don't sell
+    or rent your information to anyone, and we don't use it for third-party
+    advertising.</p>
+    <div class="card">
+      <p><b>Firebase (Google)</b> — Analytics, Crashlytics, Remote Config, and
+      anonymous authentication. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy ↗</a></p>
+    </div>
+    <div class="card">
+      <p><b>RevenueCat</b> — manages and validates Stature Pro subscriptions across
+      stores. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy ↗</a></p>
+    </div>
+    <div class="card">
+      <p><b>Google Play / Apple App Store billing</b> — processes your actual
+      payment. We never see or store your card details.</p>
+    </div>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">6</span>Storage &amp; retention</h2>
+    <p>Your growth profile and measurement history live in local app storage on
+    your device. <b>Uninstalling the app deletes this data permanently</b> — we
+    have no copy to restore it from. Anonymous analytics and crash events are
+    retained by Firebase per Google's standard retention windows (typically up
+    to 14 months for Analytics).</p>
+  </section>
+
+  <section id="choices">
+    <h2><span class="num">7</span>Your choices</h2>
+    <ul>
+      <li><b>Delete your data:</b> uninstall the app — this removes your entire local growth profile.</li>
+      <li><b>Manage or cancel your subscription:</b> through Google Play → Subscriptions, or the App Store → Subscriptions on iOS.</li>
+      <li><b>Opt out of analytics identifiers:</b> contact us (below) and we'll help you request deletion from Firebase.</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">8</span>Children's privacy</h2>
+    <p>Stature is intended for a general and teen audience and is not directed at
+    children under 13. We do not knowingly collect personal information from
+    children under 13. If you believe a child has provided us with data through
+    analytics identifiers, contact us and we will delete it.</p>
+  </section>
+
+  <section id="health">
+    <h2><span class="num">9</span>Not medical advice</h2>
+    <p>Height and growth estimates in Stature are statistical projections for
+    informational purposes only. They are not a medical diagnosis and don't
+    replace advice from a pediatrician or healthcare provider — especially if
+    you have concerns about growth, puberty, or development.</p>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">10</span>Security</h2>
+    <p>We rely on your device's built-in app sandboxing to protect locally stored
+    data, and on Firebase's and RevenueCat's own security practices for the
+    limited data sent to them. No method of transmission or storage is 100%
+    secure, but nothing here is more sensitive than typical fitness-app data.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">11</span>Changes to this policy</h2>
+    <p>If this policy changes, we'll update the effective date above and, for
+    material changes, surface a notice inside the app.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">12</span>Contact us</h2>
+    <p>Questions about this policy or your data? Email
+    <a href="mailto:ismail.karakasmaras@gmail.com">ismail.karakasmaras@gmail.com</a>.</p>
+    <div class="disclaimer">
+      This policy was drafted to accurately describe Stature's current data
+      practices and is not a substitute for legal advice. If your business
+      needs guarantee compliance in a specific jurisdiction, have it reviewed
+      by a qualified lawyer before relying on it.
+    </div>
+  </section>
+
+  <footer>
+    <div class="links"><a href="terms.html">Terms of Service</a></div>
+    <div>© 2026 Stature</div>
+  </footer>
+</div>
+</body>
+</html>
