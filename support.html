@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stature Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAFAF7; --surface:#F2F2EA; --border:#E3E3D8;
+    --text:#15180F; --text-muted:#5B6153; --accent:#5E9412; --accent-ink:#22310A;
+    --accent-soft:rgba(94,148,18,0.10); --chip:#EDF3E2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0A0D08; --surface:#12160D; --border:#212A16;
+      --text:#F1F4EA; --text-muted:#9AA38D; --accent:#C7FF24; --accent-ink:#0A0D08;
+      --accent-soft:rgba(199,255,36,0.12); --chip:#182010;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0A0D08; --surface:#12160D; --border:#212A16;
+    --text:#F1F4EA; --text-muted:#9AA38D; --accent:#C7FF24; --accent-ink:#0A0D08;
+    --accent-soft:rgba(199,255,36,0.12); --chip:#182010;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Manrope',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    padding:0 20px; line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:700px; margin:0 auto; padding-block:48px 80px;}
+  header.top{display:flex; align-items:center; gap:12px; margin-bottom:8px;}
+  .mark{width:36px; height:36px; border-radius:10px; flex:none;}
+  .brand{font-weight:800; font-size:15px; letter-spacing:0.2px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:6px; margin-top:28px;
+    background:var(--chip); color:var(--accent); border:1px solid var(--border);
+    padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700;
+    letter-spacing:0.6px; text-transform:uppercase;
+  }
+  h1{
+    font-size:clamp(30px,5vw,40px); font-weight:800; letter-spacing:-0.5px;
+    margin:14px 0 6px; text-wrap:balance;
+  }
+  .meta{color:var(--text-muted); font-size:14px; margin-bottom:28px;}
+  .lede{
+    font-size:17px; color:var(--text); background:var(--surface);
+    border:1px solid var(--border); border-radius:14px; padding:18px 20px;
+    margin-bottom:32px;
+  }
+  .lede b{color:var(--accent-ink); background:var(--accent-soft); padding:0 3px; border-radius:4px;}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lede b{color:var(--text);}}
+  :root[data-theme="dark"] .lede b{color:var(--text);}
+  nav.toc{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:40px;}
+  nav.toc a{
+    font-size:13px; font-weight:600; color:var(--text-muted);
+    text-decoration:none; background:var(--surface); border:1px solid var(--border);
+    padding:6px 12px; border-radius:8px;
+  }
+  nav.toc a:hover{color:var(--accent-ink); border-color:var(--accent);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) nav.toc a:hover{color:var(--accent);}}
+  :root[data-theme="dark"] nav.toc a:hover{color:var(--accent);}
+  section{margin-bottom:36px; scroll-margin-top:20px;}
+  h2{font-size:21px; font-weight:800; margin:0 0 12px; display:flex; align-items:baseline; gap:10px;}
+  h2 .num{
+    color:var(--accent-ink); background:var(--accent-soft);
+    font-size:13px; font-weight:800; padding:2px 8px; border-radius:6px;
+  }
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) h2 .num{color:var(--accent);}}
+  :root[data-theme="dark"] h2 .num{color:var(--accent);}
+  p{margin:0 0 12px; color:var(--text);}
+  p.muted, li.muted{color:var(--text-muted);}
+  ul{margin:0 0 12px; padding-left:20px;}
+  li{margin-bottom:6px;}
+  a{color:var(--accent-ink);}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) a{color:var(--accent);}}
+  :root[data-theme="dark"] a{color:var(--accent);}
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px;}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  th{color:var(--text-muted); font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:0.4px;}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0;}
+  footer{
+    margin-top:56px; padding-top:24px; border-top:1px solid var(--border);
+    color:var(--text-muted); font-size:13.5px; display:flex; flex-wrap:wrap;
+    gap:8px 18px; justify-content:space-between; align-items:center;
+  }
+  footer .links a{margin-right:16px; font-weight:700; text-decoration:none;}
+  .disclaimer{
+    margin-top:14px; font-size:12.5px; color:var(--text-muted);
+    background:var(--surface); border:1px dashed var(--border); border-radius:10px; padding:12px 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <svg class="mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stature">
+      <rect width="100" height="100" rx="26" fill="#C7FF24"/>
+      <path d="M28 74 L50 32 L72 74" fill="none" stroke="#141A0C" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="50" cy="24" r="6.2" fill="#141A0C"/>
+    </svg>
+    <span class="brand">Stature</span>
+  </header>
+
+  <span class="eyebrow">Help</span>
+  <h1>Support</h1>
+  <p class="meta">Stature: Height Growth Tracker · iOS and Android</p>
+
+  <p class="lede">Need help with Stature? Email <b><a href="mailto:ismail.karakasmaras@gmail.com?subject=Stature%20Support">ismail.karakasmaras@gmail.com</a></b> — we usually reply within 2 business days.</p>
+
+  <section>
+    <h2><span class="num">1</span>Subscriptions</h2>
+    <p><b>Restore a purchase:</b> open the Stature Pro screen and tap <b>Restore</b>. Use the same Apple ID or Google account you purchased with.</p>
+    <p><b>Cancel or manage:</b> on iPhone, go to Settings → your name → Subscriptions → Stature. On Android, open Google Play → Profile → Payments &amp; subscriptions → Subscriptions. Deleting the app does not cancel a subscription.</p>
+    <p><b>Refunds:</b> payments are processed by Apple or Google. Request a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> or through Google Play.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span>Your data</h2>
+    <p>Stature has no account. Your growth profile and measurements are stored only on your device.</p>
+    <ul>
+      <li><b>Export:</b> Profile → Export measurements.</li>
+      <li><b>Delete:</b> Profile → Delete all data, or uninstall the app.</li>
+    </ul>
+    <p>See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span>About the estimates</h2>
+    <p>Stature compares your height with the CDC stature-for-age reference and shows statistical estimates. It is not medical advice. Talk to a doctor about any concerns regarding growth or development.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span>Contact</h2>
+    <p>Email <a href="mailto:ismail.karakasmaras@gmail.com?subject=Stature%20Support">ismail.karakasmaras@gmail.com</a>. Please include your device model and app version (Profile → bottom of the screen).</p>
+  </section>
+
+  <footer>
+    <div class="links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+    <div>© 2026 Stature</div>
+  </footer>
+</div>
+</body>
+</html>
